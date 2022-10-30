@@ -1,1 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500&display=swap");
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: rgba(201, 201, 201, 0.253) !important;
+  font-family: "Tajawal", sans-serif;
+}
+form {
+  width: 70%;
+  margin: 50px auto;
+  padding: 50px 20px 0;
+  border: 5px solid rgba(105, 105, 105, 0.151);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+}

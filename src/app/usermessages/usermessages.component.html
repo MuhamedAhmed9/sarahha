@@ -1,0 +1,45 @@
+<div class="container p-5 pb-1">
+  <div
+    class="header-content position-relative bg-white text-center my-4 p-3 pt-4 rounded"
+  >
+    <img
+      [src]="
+        userData?.profilePic
+          ? userData.profilePic
+          : './../../assets/xxx003-512.webp'
+      "
+      alt=""
+    />
+    <h2 class="h3 my-4">{{ userData?.name }}</h2>
+    <button
+      (click)="shareLink(userData._id)"
+      class="rounded btn btn-outline-info"
+    >
+      <i class="fa-solid fa-share-nodes mx-2"></i>Share Profile
+    </button>
+  </div>
+</div>
+<div class="container p-5 pt-0">
+  <h3 class="text-center">Your Messages:</h3>
+  <div class="messages bg-white text-center my-4 p-3 pt-4 rounded">
+    <h5 *ngIf="userMessages.length == 0" class="text-center">
+      No Messages in your Inbox
+    </h5>
+    <div
+      *ngFor="let message of userMessages"
+      data-id="{{ message._id }}"
+      class="message position-relative my-3 p-2"
+    >
+      <p>{{ message.text }}</p>
+      <p class="text-muted fs-6">
+        {{ message.createdAt | date: "mediumDate" }}
+      </p>
+      <button
+        (click)="deleteMessage(message._id)"
+        class="alert alert-danger fs-6 p-1 px-2"
+      >
+        <i class="fa-solid fa-trash mx-2"></i>Delete
+      </button>
+    </div>
+  </div>
+</div>

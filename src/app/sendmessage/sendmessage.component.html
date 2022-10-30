@@ -1,0 +1,36 @@
+<div class="container p-5 pb-1">
+  <div
+    class="header-content position-relative bg-white text-center my-4 p-3 pt-4 rounded"
+  >
+    <img
+      [src]="
+        userData?.profilePic
+          ? userData.profilePic
+          : './../../assets/xxx003-512.webp'
+      "
+      alt=""
+    />
+    <h2 class="h3 my-4">{{ userData?.name }}</h2>
+  </div>
+</div>
+<div class="container p-5 pt-0">
+  <h3 class="text-center">
+    Type Your Message ( Your are not on radar <i class="fa fa-smile"></i> ) :
+  </h3>
+  <div class="messages bg-white text-center my-4 p-3 pt-4 rounded">
+    <div class="position-relative my-3 p-2">
+      <textarea
+        class="form-control"
+        placeholder="Type your message here"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        [(ngModel)]="messageText"
+      ></textarea>
+      <button (click)="sendMessage()" class="btn btn-info my-3 p-2">
+        Send Message
+      </button>
+    </div>
+  </div>
+</div>

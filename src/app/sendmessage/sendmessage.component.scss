@@ -1,0 +1,11 @@
+.header-content img {
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  z-index: 1;
+}
